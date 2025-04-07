@@ -1,15 +1,20 @@
 ---
 
-# **Amazon USA Sales Analysis Project**
+# **Amazon Sales Analysis Project**
 
 
 ---
 
 ## **Project Overview**
 
-I have worked on analyzing a dataset of over 20,000 sales records from an Amazon-like e-commerce platform. This project involves extensive querying of customer behavior, product performance, and sales trends using PostgreSQL. Through this project, I have tackled various SQL problems, including revenue analysis, customer segmentation, and inventory management.
+I have worked on analyzing a dataset of over 21,600 sales records and 9+ tables from Amazon e-commerce platform. This project involves extensive querying of customer behavior, product performance, and sales trends using PostgreSQL. Through this project, I have tackled various SQL problems, including revenue analysis, customer segmentation, and inventory management.
 
 The project also focuses on data cleaning, handling null values, and solving real-world business problems using structured queries.
+
+ERD diagram
+
+![erd2](https://github.com/user-attachments/assets/c2c1c355-5243-4b54-ae40-f7d3f5cc9b22)
+
 
 An ERD diagram is included to visually represent the database schema and relationships between tables.
 
@@ -741,9 +746,3 @@ This advanced SQL project successfully demonstrates my ability to solve real-wor
 
 By completing this project, I have gained a deeper understanding of how SQL can be used to tackle complex data problems and drive business decision-making.
 
----
-
-### **Entity Relationship Diagram (ERD)**
-![ERD](https://github.com/najirh/amazon_usa_project5/blob/main/erd.png)
-
----
