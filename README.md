@@ -1,29 +1,28 @@
+---
+
 # **Amazon USA Sales Analysis Project**
 
+### **Difficulty Level: Advanced**
 
 ---
 
 ## **Project Overview**
 
-I have worked on analyzing a dataset of over 21,600 sales records accross 9+ tables from an Amazon e-commerce platform. This project involves extensive querying of customer behavior, product performance, and sales trends using PostgreSQL. Through this project, I have tackled various SQL problems, including revenue analysis, customer segmentation, and inventory management.
+I have worked on analyzing a dataset of over 20,000 sales records from an Amazon-like e-commerce platform. This project involves extensive querying of customer behavior, product performance, and sales trends using PostgreSQL. Through this project, I have tackled various SQL problems, including revenue analysis, customer segmentation, and inventory management.
 
 The project also focuses on data cleaning, handling null values, and solving real-world business problems using structured queries.
 
+An ERD diagram is included to visually represent the database schema and relationships between tables.
 
-## ERD diagram
-![erd2](https://github.com/user-attachments/assets/05a92b0d-32d1-4069-a866-3d86afb4427c)
-
-##### **An ERD diagram is included to visually represent the database schema and relationships between tables.**
 ---
 
-
+![ERD Scratch](https://github.com/najirh/amazon_usa_project5/blob/main/erd2.png)
 
 ## **Database Setup & Design**
 
 ### **Schema Structure**
 
 ```sql
--- category TABLE
 CREATE TABLE category
 (
   category_id	INT PRIMARY KEY,
@@ -48,7 +47,7 @@ CREATE TABLE sellers
   origin VARCHAR(15)
 );
 
--- products TABLE
+-- products table
   CREATE TABLE products
   (
   product_id INT PRIMARY KEY,	
@@ -59,7 +58,7 @@ CREATE TABLE sellers
   CONSTRAINT product_fk_category FOREIGN KEY(category_id) REFERENCES category(category_id)
 );
 
--- orders TABLE
+-- orders
 CREATE TABLE orders
 (
   order_id INT PRIMARY KEY, 	
@@ -71,7 +70,6 @@ CREATE TABLE orders
   CONSTRAINT orders_fk_sellers FOREIGN KEY (seller_id) REFERENCES sellers(seller_id)
 );
 
--- order_items TABLE
 CREATE TABLE order_items
 (
   order_item_id INT PRIMARY KEY,
@@ -94,7 +92,6 @@ CREATE TABLE payments
   CONSTRAINT payments_fk_orders FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
---shippings TABLE
 CREATE TABLE shippings
 (
   shipping_id	INT PRIMARY KEY,
@@ -106,7 +103,6 @@ CREATE TABLE shippings
   CONSTRAINT shippings_fk_orders FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
--- inventory TABLE
 CREATE TABLE inventory
 (
   inventory_id INT PRIMARY KEY,
@@ -748,3 +744,7 @@ By completing this project, I have gained a deeper understanding of how SQL can 
 
 ---
 
+### **Entity Relationship Diagram (ERD)**
+![ERD](https://github.com/najirh/amazon_usa_project5/blob/main/erd.png)
+
+---
